@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="UTF-8">
+  <title id="title">Math trick</title>
+  <link rel="icon" href="icon.png">
+  
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      background-color: #eaffff;
+    }
+    
+    .header {
+      display: flex;
+      height: 100px;
+      background-color: #0018ff;
+      align-items: center;
+      margin: 0;
+    }
+    
+    h1 {
+      font-size: 60px;
+      margin: 0;
+      position: absolute;
+      left: 10px;
+      font-family: "Arial", sans-serif;
+      font-style: italic;
+    }
+    
+    #til {
+      margin: 15px;
+      position: absolute;
+      right: 148px;
+      font-size: 35px;
+      font-weight: 500;
+    }
+    
+    select {
+      margin: 15px;
+      position: absolute;
+      right: 7px;
+      width: 130px;
+      height: 50px;
+      font-size: 20px;
+      border: solid 7px black;
+      border-radius: 16px;
+      background-color: #eaffff;
+    }
+    
+    main {
+      background-image: url('math.png');
+      width: 100%;
+      height: 1280px;
+      position: absolute;
+      top: 100px;
+    }
+    
+    h2 {
+      font-size: 50px;
+    }
+    
+    #text2 {
+      font-family: helvetica;
+      color: #13003c;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    
+    div {
+      display: flex;
+      justify-content: center;
+    }
+    
+    span {
+      border: solid #070064 6px;
+      border-radius: 20px;
+      align-items: center;
+      justify-content: center;
+      background-color: #aaf4ff;
+      padding: 2px;
+      box-shadow: 8px 8px 16px #81c2dd;
+      cursor: pointer;
+      height: 50px;
+      width: 30%;
+      font-size: 30px;
+      margin: 10px;
+      letter-spacing: 3px;
+    }
+    
+    span:active {
+      border: solid #00dd15 6px;
+      background-color: #bfffd5
+    }
+    
+    footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      justify-content: center;
+      align-items: center;
+      background-color: #091029;
+      height: 180px;
+      margin: 0;
+    }
+
+    #info {
+      margin: auto;
+      color: rgb(223, 237, 243);
+      font-size: 22px;
+    }
+    
+  </style>
+  
+</head>
+<body align="center">
+  
+  <div class="header">
+    
+    <h1 id="h1">Math trick</h1>
+    <p id="til">Language/Язык/Til</p>
+    <select id="lang">
+      <option 
+        value="en"
+        onclick="changeL()"
+      >English</option>
+      <option 
+        value="ru"
+        onclick="changeL()"
+      >Русский</option>
+      <option
+        value="uz"
+        onclick="changeL()"
+      >O'zbekcha</option>
+    </select>
+    
+  </div>
+  
+  <main>
+  
+    <h2 id="text1">Think of one natural number that is greater than 0 and less than 22</h2>
+  
+    <p id="text2">Click on the group that contains the number you think</p>
+    <div>
+    
+      <span id="stGroup">
+        4,17,21,15,1,5,13
+      </span>
+    
+      <span id="ndGroup">
+        7,11,12,18,6,9,14
+      </span>
+    
+      <span id="rdGroup">
+        8,3,20,16,2,19,10
+      </span>
+    
+    </div>
+  
+  </main>
+  
+  <footer>
+    <pre>
+      <p id="info">
+        All Rights Reserved. &copy;Created by Sh.Sanatov
+        VERSION 1.0.5
+      </p>
+    </pre>
+  </footer>
+  
+  <script>
+    
+    var lang = document.getElementById('lang'); 
+    var title = '';
+    var h1 = '';
+    var text1 = '';
+    var text2 = '';
+    var yana = 'Again';
+    var text3 = 'The number you think of ';
+    var text4 = 'Please refresh the page to try again.';
+    var taps = 0;
+   
+    var stNum = [4, 17, 21, 15, 1, 5, 13];
+    var ndNum = [7, 11, 12, 18, 6, 9, 14];
+    var rdNum = [8, 3, 20, 16, 2, 19, 10];
+   
+    var stNum1 = [];
+    var ndNum1 = [];
+    var rdNum1 = [];
+   
+    var stNum2 = [];
+    var ndNum2 = [];
+    var rdNum2 = [];
+    
+    lang.addEventListener('change', function() {
+     
+      var selectedOption = lang.options[lang.selectedIndex].text;
+     
+      if(selectedOption === 'English') {
+        document.getElementById('title').innerHTML = 'Math trick'; 
+        document.getElementById('h1').innerHTML = 'Math trick';
+        document.getElementById('text1').innerHTML = 'Think of one natural number that is greater than 0 and less than 22';
+        document.getElementById('text2').innerHTML = 'Click on the group that contains the number you think';
+        document.getElementById('info').innerHTML = 'All Rights Reserved. &copy;Created by Sh.Sanatov<br> VERSION 1.0.5';
+        yana = 'Again';
+        text3 = 'The number you think of ';
+        text4 = 'Please refresh the page to try again.';
+      }
+      
+      else if(selectedOption === 'Русский'){
+        document.getElementById('title').innerHTML = 'Математический трюк';
+        document.getElementById('h1').innerHTML = 'Математический трюк';
+        document.getElementById('text1').innerHTML = 'Думайте одно натуральное число больше 0 и меньше 22';
+        document.getElementById('text2').innerHTML = 'Нажмите на группу, содержащую номер, который, по вашему мнению';
+        document.getElementById('info').innerHTML = 'Все права защищены. &copy;Создано Ш.Санатов<br> ВЕРСИЯ 1.0.5';
+        yana = 'Снова';
+        text3 = 'Это число, о котором вы подумал(а) ';
+        text4 = 'Пожалуйста, обновите страницу, чтобы повторить попытку.';
+      } 
+      
+      else {
+        document.getElementById('title').innerHTML = 'Matematik hiyla';
+        document.getElementById('h1').innerHTML = 'Matematik hiyla';
+        document.getElementById('text1').innerHTML = '0dan katta 22dan kichik bitta natural son õylang';
+        document.getElementById('text2').innerHTML = 'Õsha õylagan soningiz turgan guruh ustiga bosing';
+        document.getElementById('info').innerHTML = 'Barcha huquqlar himoyalangan. &copy;Sh.Sanatov tomonidan yaratilgan<br> VERSIYA 1.0.5';
+        yana = 'Yana';
+        text3 = 'Siz õylagan son: ';
+        text4 = 'Yana bir bor urunib kõrish uchun sahifani yangilang.';
+      }
+      
+    });
+    
+    document.getElementById('stGroup').addEventListener('click', function(){
+      taps++;
+      
+      if (taps === 1) {
+       
+        stNum1[0] = ndNum[0];
+        stNum1[1] = ndNum[3];
+        stNum1[2] = ndNum[6];
+        stNum1[3] = stNum[2];
+        stNum1[4] = stNum[5];
+        stNum1[5] = rdNum[1];
+        stNum1[6] = rdNum[4];
+    
+        document.getElementById('stGroup').innerHTML = stNum1;
+                           
+        ndNum1[0] = ndNum[1];
+        ndNum1[1] = ndNum[4];
+        ndNum1[2] = stNum[0];
+        ndNum1[3] = stNum[3];
+        ndNum1[4] = stNum[6];
+        ndNum1[5] = rdNum[2];
+        ndNum1[6] = rdNum[5];
+       
+        document.getElementById('ndGroup').innerHTML = ndNum1;   
+      
+        rdNum1[0] = ndNum[2];
+        rdNum1[1] = ndNum[5];
+        rdNum1[2] = stNum[1];
+        rdNum1[3] = stNum[4];
+        rdNum1[4] = rdNum[0];
+        rdNum1[5] = rdNum[3];
+        rdNum1[6] = rdNum[6];
+      
+        document.getElementById('rdGroup').innerHTML = rdNum1;
+    
+        alert(yana);
+      }
+      
+      else if (taps === 2) {
+        
+        stNum2[0] = ndNum1[0];
+        stNum2[1] = ndNum1[3];
+        stNum2[2] = ndNum1[6];
+        stNum2[3] = stNum1[2];
+        stNum2[4] = stNum1[5];
+        stNum2[5] = rdNum1[1];
+        stNum2[6] = rdNum1[4];
+       
+        document.getElementById('stGroup').innerHTML = stNum2;
+       
+        ndNum2[0] = ndNum1[1];
+        ndNum2[1] = ndNum1[4];
+        ndNum2[2] = stNum1[0];
+        ndNum2[3] = stNum1[3];
+        ndNum2[4] = stNum1[6];
+        ndNum2[5] = rdNum1[2];
+        ndNum2[6] = rdNum1[5];
+      
+        document.getElementById('ndGroup').innerHTML = ndNum2;   
+      
+        rdNum2[0] = ndNum1[2];
+        rdNum2[1] = ndNum1[5];
+        rdNum2[2] = stNum1[1];
+        rdNum2[3] = stNum1[4];
+        rdNum2[4] = rdNum1[0];
+        rdNum2[5] = rdNum1[3];
+        rdNum2[6] = rdNum1[6];
+       
+        document.getElementById('rdGroup').innerHTML = rdNum2;
+    
+        alert(yana);
+      }
+      
+      else {
+        alert(text3 + stNum2[3] + '. ' + text4);
+      }
+      
+    });
+    
+    document.getElementById('ndGroup').addEventListener('click', function(){
+      taps++;
+      
+      if (taps === 1) {
+        
+        stNum1[0] = stNum[0];
+        stNum1[1] = stNum[3];
+        stNum1[2] = stNum[6];
+        stNum1[3] = ndNum[2];
+        stNum1[4] = ndNum[5];
+        stNum1[5] = rdNum[1];
+        stNum1[6] = rdNum[4];
+       
+        document.getElementById('stGroup').innerHTML = stNum1;
+       
+        ndNum1[0] = stNum[1];
+        ndNum1[1] = stNum[4];
+        ndNum1[2] = ndNum[0];
+        ndNum1[3] = ndNum[3];
+        ndNum1[4] = ndNum[6];
+        ndNum1[5] = rdNum[2];
+        ndNum1[6] = rdNum[5];
+      
+        document.getElementById('ndGroup').innerHTML = ndNum1;   
+       
+        rdNum1[0] = stNum[2];
+        rdNum1[1] = stNum[5];
+        rdNum1[2] = ndNum[1];
+        rdNum1[3] = ndNum[4];
+        rdNum1[4] = rdNum[0];
+        rdNum1[5] = rdNum[3];
+        rdNum1[6] = rdNum[6];
+      
+        document.getElementById('rdGroup').innerHTML = rdNum1;
+  
+        alert(yana);
+      }
+      
+      else if (taps === 2) {
+       
+        stNum2[0] = stNum1[0];
+        stNum2[1] = stNum1[3];
+        stNum2[2] = stNum1[6];
+        stNum2[3] = ndNum1[2];
+        stNum2[4] = ndNum1[5];
+        stNum2[5] = rdNum1[1];
+        stNum2[6] = rdNum1[4];
+       
+        document.getElementById('stGroup').innerHTML = stNum2;
+      
+        ndNum2[0] = stNum1[1];
+        ndNum2[1] = stNum1[4];
+        ndNum2[2] = ndNum1[0];
+        ndNum2[3] = ndNum1[3];
+        ndNum2[4] = ndNum1[6];
+        ndNum2[5] = rdNum1[2];
+        ndNum2[6] = rdNum1[5];
+       
+        document.getElementById('ndGroup').innerHTML = ndNum2;   
+      
+        rdNum2[0] = stNum1[2];
+        rdNum2[1] = stNum1[5];
+        rdNum2[2] = ndNum1[1];
+        rdNum2[3] = ndNum1[4];
+        rdNum2[4] = rdNum1[0];
+        rdNum2[5] = rdNum1[3];
+        rdNum2[6] = rdNum1[6];
+       
+        document.getElementById('rdGroup').innerHTML = rdNum2;
+      
+        alert(yana);
+      }
+      
+      else {
+        alert(text3 + ndNum2[3] + '. ' + text4);
+      }
+      
+    });
+    
+    document.getElementById('rdGroup').addEventListener('click', function(){
+      taps++;
+      
+      if (taps === 1) {
+        
+        stNum1[0] = stNum[0];
+        stNum1[1] = stNum[3];
+        stNum1[2] = stNum[6];
+        stNum1[3] = rdNum[2];
+        stNum1[4] = rdNum[5];
+        stNum1[5] = ndNum[1];
+        stNum1[6] = ndNum[4];
+       
+        document.getElementById('stGroup').innerHTML = stNum1;
+      
+        ndNum1[0] = stNum[1];
+        ndNum1[1] = stNum[4];
+        ndNum1[2] = rdNum[0];
+        ndNum1[3] = rdNum[3];
+        ndNum1[4] = rdNum[6];
+        ndNum1[5] = ndNum[2];
+        ndNum1[6] = ndNum[5];
+       
+        document.getElementById('ndGroup').innerHTML = ndNum1;   
+       
+        rdNum1[0] = stNum[2];
+        rdNum1[1] = stNum[5];
+        rdNum1[2] = rdNum[1];
+        rdNum1[3] = rdNum[4];
+        rdNum1[4] = ndNum[0];
+        rdNum1[5] = ndNum[3];
+        rdNum1[6] = ndNum[6];
+        
+        document.getElementById('rdGroup').innerHTML = rdNum1;
+      
+        alert(yana);
+      }
+      
+      else if (taps === 2) {
+        
+        stNum2[0] = stNum1[0];
+        stNum2[1] = stNum1[3];
+        stNum2[2] = stNum1[6];
+        stNum2[3] = rdNum1[2];
+        stNum2[4] = rdNum1[5];
+        stNum2[5] = ndNum1[1];
+        stNum2[6] = ndNum1[4];
+       
+        document.getElementById('stGroup').innerHTML = stNum2;
+       
+        ndNum2[0] = stNum1[1];
+        ndNum2[1] = stNum1[4];
+        ndNum2[2] = rdNum1[0];
+        ndNum2[3] = rdNum1[3];
+        ndNum2[4] = rdNum1[6];
+        ndNum2[5] = ndNum1[2];
+        ndNum2[6] = ndNum1[5];
+        
+        document.getElementById('ndGroup').innerHTML = ndNum2;   
+      
+        rdNum2[0] = stNum1[2];
+        rdNum2[1] = stNum1[5];
+        rdNum2[2] = rdNum1[1];
+        rdNum2[3] = rdNum1[4];
+        rdNum2[4] = ndNum1[0];
+        rdNum2[5] = ndNum1[3];
+        rdNum2[6] = ndNum1[6];
+        
+        document.getElementById('rdGroup').innerHTML = rdNum2;
+     
+        alert(yana);
+      }
+      
+      else {
+        alert(text3 + rdNum2[3] + '. ' + text4);
+      }
+      
+    });
+    
+  </script>  
+  
+</body>
+</html>
