@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-  
-  <meta charset="UTF-8">
+<!-- Dekstop site -->                              
+<!DOCTYPE html>                                    
+<html>                                    
+<head>                                                
+                                                                                                                                                                        
+  <meta charset="UTF-8">                                    
   <title id="title">Math trick</title>
   <link rel="icon" href="icon.png">
-  
-  <style>
-    
-    body {
-      margin: 0;
+                                                                                                                                                    
+  <style>                                    
+                                                                                                                                            
+    body {                              
+      margin: 0;                        
       padding: 0;
       justify-content: center;
       background-color: #eaffff;
-    }
-    
+      height: 100vh;
+    }                                          
+                                              
     .header {
       display: flex;
       height: 100px;
@@ -89,7 +91,7 @@
       width: 30%;
       font-size: 30px;
       margin: 10px;
-      letter-spacing: 3px;
+      letter-spacing: 1px;
     }
     
     span:active {
@@ -103,61 +105,73 @@
       left: 0;
       right: 0;
       justify-content: center;
-      align-items: center;
+      text-align: center;
       background-color: #091029;
-      height: 180px;
+      height: 156px;
       margin: 0;
     }
 
     #info {
       margin: auto;
       color: rgb(223, 237, 243);
-      font-size: 22px;
+      font-size: 35px;
+    }
+    
+    a {
+      color: #40cbff;
     }
     
   </style>
   
 </head>
-<body align="center">
-  
-  <div class="header">
-    
-    <h1 id="h1">Math trick</h1>
-    <p id="til">Language/Язык/Til</p>
-    <select id="lang">
-      <option 
-        value="en"
-        onclick="changeL()"
-      >English</option>
-      <option 
-        value="ru"
-        onclick="changeL()"
-      >Русский</option>
-      <option
-        value="uz"
-        onclick="changeL()"
-      >O'zbekcha</option>
-    </select>
-    
-  </div>
+<body>
+ 
+  <header>
+    <div class="header">
+      
+      <h1 id="h1" onclick="location.reload()">Math trick</h1>
+      <p id="til">Language/Язык/Til</p>
+      <select id="lang">
+        <option 
+          value="en"
+          onclick="changeL()"
+        >English</option>
+        <option 
+          value="ru"
+          onclick="changeL()"
+        >Русский</option>
+        <option
+          value="uz"
+          onclick="changeL()"
+        >O'zbekcha</option>
+      </select>
+    </div>
+  </header>
   
   <main>
-  
-    <h2 id="text1">Think of one natural number that is greater than 0 and less than 22</h2>
-  
-    <p id="text2">Click on the group that contains the number you think</p>
+    
+    <center>
+      <h2 id="text1">Think of one natural number that is greater than 0 and less than 22</h2>
+      <p id="text2">Click on the group that contains the number you think</p>
+    </center>
     <div>
     
-      <span id="stGroup">
-        4,17,21,15,1,5,13
+      <span>
+        <center id="stGroup">
+          4,17,21,15,2,5,13
+        </center>
       </span>
     
-      <span id="ndGroup">
-        7,11,12,18,6,9,14
+      <span> 
+        <center id="ndGroup">
+          7,11,12,18,6,9,14
+        </center>
       </span>
-    
-      <span id="rdGroup">
-        8,3,20,16,2,19,10
+      
+      <span>
+        <center id="rdGroup">
+          8,3,20,16,1,19,10
+        </center>
       </span>
     
     </div>
@@ -165,12 +179,18 @@
   </main>
   
   <footer>
-    <pre>
+    <center>
       <p id="info">
-        All Rights Reserved. &copy;Created by Sh.Sanatov
+        Math trick, Copyright &copy; 2024
+        <br>
+        All Rights Reserved. Created by 
+        <a href="http://t.me/ShaxriyorProgrammer">
+          Sh.Sanatov
+        </a>
+        <br>
         VERSION 1.0.5
       </p>
-    </pre>
+    </center>
   </footer>
   
   <script>
@@ -185,9 +205,62 @@
     var text4 = 'Please refresh the page to try again.';
     var taps = 0;
    
-    var stNum = [4, 17, 21, 15, 1, 5, 13];
+    var numbers = [
+      1, 2, 3, 4, 5, 6, 7, 
+      8, 9, 10, 11, 12, 13, 14,
+      15, 16, 17, 18, 19, 20, 21
+    ];
+    
+    var stNum = [4, 17, 21, 15, 2, 5, 13];
     var ndNum = [7, 11, 12, 18, 6, 9, 14];
-    var rdNum = [8, 3, 20, 16, 2, 19, 10];
+    var rdNum = [8, 3, 20, 16, 1, 19, 10];
+   
+    var min = 1;
+    var max = 21;
+    var randomNum = '';
+    
+    var st = 0;
+    while (st < 7) {
+      randomNum = Math.floor(Math.random() * (max - min + 1)) - min + 1;
+      if(!stNum.includes(numbers[randomNum])) {
+        stNum[st] = numbers[randomNum];
+        st++;
+      }
+    }
+    
+    document.getElementById('stGroup').innerHTML = stNum;
+    
+    var nd = 0;
+    while (nd < 7) {
+      randomNum = Math.floor(Math.random() * (max - min + 1)) - min + 1;
+      if(
+        !stNum.includes(numbers[randomNum])
+        &&
+        !ndNum.includes(numbers[randomNum])
+      ) {
+        ndNum[nd] = numbers[randomNum];
+        nd++;
+      }
+    }
+    
+    document.getElementById('ndGroup').innerHTML = ndNum;
+    
+    var rd = 0;
+    while (rd < 7) {
+      randomNum = Math.floor(Math.random() * (max - min + 1)) - min + 1;
+      if(
+        !stNum.includes(numbers[randomNum])
+        &&
+        !ndNum.includes(numbers[randomNum])
+        && 
+        !rdNum.includes(numbers[randomNum])
+      ) {
+        rdNum[rd] = numbers[randomNum];
+        rd++;
+      }
+    }
+    
+    document.getElementById('rdGroup').innerHTML = rdNum;
    
     var stNum1 = [];
     var ndNum1 = [];
@@ -202,41 +275,51 @@
       var selectedOption = lang.options[lang.selectedIndex].text;
      
       if(selectedOption === 'English') {
+      
         document.getElementById('title').innerHTML = 'Math trick'; 
         document.getElementById('h1').innerHTML = 'Math trick';
         document.getElementById('text1').innerHTML = 'Think of one natural number that is greater than 0 and less than 22';
         document.getElementById('text2').innerHTML = 'Click on the group that contains the number you think';
-        document.getElementById('info').innerHTML = 'All Rights Reserved. &copy;Created by Sh.Sanatov<br> VERSION 1.0.5';
+        document.getElementById('info').innerHTML = 'Math trick, Copyright &copy; 2024 <br> All Rights Reserved. Created by <a href="http://t.me/Shaxriyor_programmer">Sh.Sanatov</a> <br> VERSION 1.0.5';
+      
         yana = 'Again';
         text3 = 'The number you think of ';
         text4 = 'Please refresh the page to try again.';
+    
       }
       
       else if(selectedOption === 'Русский'){
+      
         document.getElementById('title').innerHTML = 'Математический трюк';
         document.getElementById('h1').innerHTML = 'Математический трюк';
         document.getElementById('text1').innerHTML = 'Думайте одно натуральное число больше 0 и меньше 22';
         document.getElementById('text2').innerHTML = 'Нажмите на группу, содержащую номер, который, по вашему мнению';
-        document.getElementById('info').innerHTML = 'Все права защищены. &copy;Создано Ш.Санатов<br> ВЕРСИЯ 1.0.5';
+        document.getElementById('info').innerHTML = 'Математический трюк, Авторские права &copy; 2024<br> Все права защищены. Создано <a href="http://t.me/Shaxriyor_programmer">Ш.Санатов</a> <br> ВЕРСИЯ 1.0.5';
+       
         yana = 'Снова';
         text3 = 'Это число, о котором вы подумал(а) ';
         text4 = 'Пожалуйста, обновите страницу, чтобы повторить попытку.';
+  
       } 
       
       else {
+       
         document.getElementById('title').innerHTML = 'Matematik hiyla';
         document.getElementById('h1').innerHTML = 'Matematik hiyla';
         document.getElementById('text1').innerHTML = '0dan katta 22dan kichik bitta natural son õylang';
         document.getElementById('text2').innerHTML = 'Õsha õylagan soningiz turgan guruh ustiga bosing';
-        document.getElementById('info').innerHTML = 'Barcha huquqlar himoyalangan. &copy;Sh.Sanatov tomonidan yaratilgan<br> VERSIYA 1.0.5';
+        document.getElementById('info').innerHTML = 'Matematik hiyla, Mualliflik huquqi &copy; 2024 <br> Barcha huquqlar himoyalangan. <a href="http://t.me/Shaxriyor_programmer">Sh.Sanatov</a> tomonidan yaratilgan<br> VERSIYA 1.0.5';
+      
         yana = 'Yana';
         text3 = 'Siz õylagan son: ';
         text4 = 'Yana bir bor urunib kõrish uchun sahifani yangilang.';
+     
       }
       
     });
     
     document.getElementById('stGroup').addEventListener('click', function(){
+      
       taps++;
       
       if (taps === 1) {
@@ -272,6 +355,7 @@
         document.getElementById('rdGroup').innerHTML = rdNum1;
     
         alert(yana);
+        
       }
       
       else if (taps === 2) {
@@ -307,6 +391,7 @@
         document.getElementById('rdGroup').innerHTML = rdNum2;
     
         alert(yana);
+        
       }
       
       else {
@@ -316,6 +401,7 @@
     });
     
     document.getElementById('ndGroup').addEventListener('click', function(){
+ 
       taps++;
       
       if (taps === 1) {
@@ -351,6 +437,7 @@
         document.getElementById('rdGroup').innerHTML = rdNum1;
   
         alert(yana);
+   
       }
       
       else if (taps === 2) {
@@ -386,6 +473,7 @@
         document.getElementById('rdGroup').innerHTML = rdNum2;
       
         alert(yana);
+     
       }
       
       else {
@@ -395,6 +483,7 @@
     });
     
     document.getElementById('rdGroup').addEventListener('click', function(){
+    
       taps++;
       
       if (taps === 1) {
@@ -430,6 +519,7 @@
         document.getElementById('rdGroup').innerHTML = rdNum1;
       
         alert(yana);
+   
       }
       
       else if (taps === 2) {
@@ -465,15 +555,16 @@
         document.getElementById('rdGroup').innerHTML = rdNum2;
      
         alert(yana);
+                         
       }
-      
+                                                
       else {
         alert(text3 + rdNum2[3] + '. ' + text4);
       }
-      
+                                              
     });
-    
+                                          
   </script>  
-  
+                                                        
 </body>
 </html>
