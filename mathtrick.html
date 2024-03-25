@@ -1,570 +1,672 @@
-<!-- Dekstop site -->                              
-<!DOCTYPE html>                                    
-<html>                                    
-<head>                                                
-                                                                                                                                                                        
-  <meta charset="UTF-8">                                    
-  <title id="title">Math trick</title>
-  <link rel="icon" href="icon.png">
-                                                                                                                                                    
-  <style>                                    
-                                                                                                                                            
-    body {                              
-      margin: 0;                        
-      padding: 0;
-      justify-content: center;
-      background-color: #eaffff;
-      height: 100vh;
-    }                                          
-                                              
-    .header {
-      display: flex;
-      height: 100px;
-      background-color: #0018ff;
-      align-items: center;
-      margin: 0;
-    }
-    
-    h1 {
-      font-size: 60px;
-      margin: 0;
-      position: absolute;
-      left: 10px;
-      font-family: "Arial", sans-serif;
-      font-style: italic;
-    }
-    
-    #til {
-      margin: 15px;
-      position: absolute;
-      right: 148px;
-      font-size: 35px;
-      font-weight: 500;
-    }
-    
-    select {
-      margin: 15px;
-      position: absolute;
-      right: 7px;
-      width: 130px;
-      height: 50px;
-      font-size: 20px;
-      border: solid 7px black;
-      border-radius: 16px;
-      background-color: #eaffff;
-    }
-    
-    main {
-      background-image: url('math.png');
-      width: 100%;
-      height: 1280px;
-      position: absolute;
-      top: 100px;
-    }
-    
-    h2 {
-      font-size: 50px;
-    }
-    
-    #text2 {
-      font-family: helvetica;
-      color: #13003c;
-      font-size: 35px;
-      font-weight: bold;
-    }
-    
-    div {
-      display: flex;
-      justify-content: center;
-    }
-    
-    span {
-      border: solid #070064 6px;
-      border-radius: 20px;
-      align-items: center;
-      justify-content: center;
-      background-color: #aaf4ff;
-      padding: 2px;
-      box-shadow: 8px 8px 16px #81c2dd;
-      cursor: pointer;
-      height: 50px;
-      width: 30%;
-      font-size: 30px;
-      margin: 10px;
-      letter-spacing: 1px;
-    }
-    
-    span:active {
-      border: solid #00dd15 6px;
-      background-color: #bfffd5
-    }
-    
-    footer {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      justify-content: center;
-      text-align: center;
-      background-color: #091029;
-      height: 156px;
-      margin: 0;
-    }
+                                                                                                                                                                                                                                                                                                                                                                                                                  
+<!-- Dekstop site -->
+<!-- Created by Shakhriyor Sanatov -->
 
-    #info {
-      margin: auto;
-      color: rgb(223, 237, 243);
-      font-size: 35px;
-    }
+<!DOCTYPE html>
+<html>     
+<head>
     
-    a {
-      color: #40cbff;
-    }
+    <meta charset="UTF-8">
+    <title id="title">Math trick</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/ShaxriyorGK/Images/main/icon.png">
     
-  </style>
-  
+    
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            background-color: #eaffff;
+            height: 100vh;
+        }
+        
+        .header {
+            display: flex;
+            height: 100px;
+            background-color: #0018ff;
+            align-items: center;
+            margin: 0;
+        }
+        
+        h1 {
+            font-size: 60px;
+            margin: 0;
+            position: absolute;
+            left: 10px;
+            font-family: "Arial", sans-serif;
+            font-style: italic;
+        }
+        
+        #til {
+            margin: 15px;
+            position: absolute;
+            right: 148px;
+            font-size: 35px;
+            font-weight: 500;
+        }
+        
+        select {
+            margin: 15px;
+            position: absolute;
+            right: 7px;
+            width: 130px;
+            height: 50px;
+            font-size: 20px;
+            border: solid 7px black;
+            border-radius: 16px;
+            background-color: #eaffff;
+        }
+        
+        main {
+            background-image: url('https://raw.githubusercontent.com/ShaxriyorGK/Images/main/math.png');
+            width: 100%;
+            height: 1280px;
+            position: absolute;
+            top: 100px;
+        }
+        
+        h2 {
+            font-size: 50px;
+        }
+        
+        #text2 {
+            font-family: helvetica;
+            color: #13003c;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        
+        div {
+            display: flex;
+            justify-content: center;
+        }
+        
+        span {
+            border: solid #070064 6px;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+            background-color: #aaf4ff;
+            padding: 2px;
+            box-shadow: 8px 8px 16px #81c2dd;
+            cursor: pointer;
+            height: 50px;
+            width: 30%;
+            font-size: 30px;
+            margin: 10px;
+            letter-spacing: 1px;
+        }
+        
+        span:active {
+            border: solid #00dd15 6px;
+            background-color: #bfffd5
+        }
+        
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            justify-content: center;
+            text-align: center;
+            background-color: #091029;
+            height: 156px;
+            margin: 0;
+        }
+        
+        #info {
+            margin: auto;
+            color: rgb(223, 237, 243);
+            font-size: 35px;
+        }
+        
+        a {
+            color: #40cbff;
+        }
+        
+    </style>
+    
+    
 </head>
 <body>
  
-  <header>
-    <div class="header">
-      
-      <h1 id="h1" onclick="location.reload()">Math trick</h1>
-      <p id="til">Language/Язык/Til</p>
-      <select id="lang">
-        <option 
-          value="en"
-          onclick="changeL()"
-        >English</option>
-        <option 
-          value="ru"
-          onclick="changeL()"
-        >Русский</option>
-        <option
-          value="uz"
-          onclick="changeL()"
-        >O'zbekcha</option>
-      </select>
-    </div>
-  </header>
-  
-  <main>
-    
-    <center>
-      <h2 id="text1">Think of one natural number that is greater than 0 and less than 22</h2>
-      <p id="text2">Click on the group that contains the number you think</p>
-    </center>
-    <div>
-    
-      <span>
-        <center id="stGroup">
-          4,17,21,15,2,5,13
-        </center>
-      </span>
-    
-      <span> 
-        <center id="ndGroup">
-          7,11,12,18,6,9,14
-        </center>
-      </span>
-      
-      <span>
-        <center id="rdGroup">
-          8,3,20,16,1,19,10
-        </center>
-      </span>
-    
-    </div>
-  
-  </main>
-  
-  <footer>
-    <center>
-      <p id="info">
-        Math trick, Copyright &copy; 2024
-        <br>
-        All Rights Reserved. Created by 
-        <a href="http://t.me/ShaxriyorProgrammer">
-          Sh.Sanatov
-        </a>
-        <br>
-        VERSION 1.0.5
-      </p>
-    </center>
-  </footer>
-  
-  <script>
-    
-    var lang = document.getElementById('lang'); 
-    var title = '';
-    var h1 = '';
-    var text1 = '';
-    var text2 = '';
-    var yana = 'Again';
-    var text3 = 'The number you think of ';
-    var text4 = 'Please refresh the page to try again.';
-    var taps = 0;
-   
-    var numbers = [
-      1, 2, 3, 4, 5, 6, 7, 
-      8, 9, 10, 11, 12, 13, 14,
-      15, 16, 17, 18, 19, 20, 21
-    ];
-    
-    var stNum = [4, 17, 21, 15, 2, 5, 13];
-    var ndNum = [7, 11, 12, 18, 6, 9, 14];
-    var rdNum = [8, 3, 20, 16, 1, 19, 10];
-   
-    var min = 1;
-    var max = 21;
-    var randomNum = '';
-    
-    var st = 0;
-    while (st < 7) {
-      randomNum = Math.floor(Math.random() * (max - min + 1)) - min + 1;
-      if(!stNum.includes(numbers[randomNum])) {
-        stNum[st] = numbers[randomNum];
-        st++;
-      }
-    }
-    
-    document.getElementById('stGroup').innerHTML = stNum;
-    
-    var nd = 0;
-    while (nd < 7) {
-      randomNum = Math.floor(Math.random() * (max - min + 1)) - min + 1;
-      if(
-        !stNum.includes(numbers[randomNum])
-        &&
-        !ndNum.includes(numbers[randomNum])
-      ) {
-        ndNum[nd] = numbers[randomNum];
-        nd++;
-      }
-    }
-    
-    document.getElementById('ndGroup').innerHTML = ndNum;
-    
-    var rd = 0;
-    while (rd < 7) {
-      randomNum = Math.floor(Math.random() * (max - min + 1)) - min + 1;
-      if(
-        !stNum.includes(numbers[randomNum])
-        &&
-        !ndNum.includes(numbers[randomNum])
-        && 
-        !rdNum.includes(numbers[randomNum])
-      ) {
-        rdNum[rd] = numbers[randomNum];
-        rd++;
-      }
-    }
-    
-    document.getElementById('rdGroup').innerHTML = rdNum;
-   
-    var stNum1 = [];
-    var ndNum1 = [];
-    var rdNum1 = [];
-   
-    var stNum2 = [];
-    var ndNum2 = [];
-    var rdNum2 = [];
-    
-    lang.addEventListener('change', function() {
-     
-      var selectedOption = lang.options[lang.selectedIndex].text;
-     
-      if(selectedOption === 'English') {
-      
-        document.getElementById('title').innerHTML = 'Math trick'; 
-        document.getElementById('h1').innerHTML = 'Math trick';
-        document.getElementById('text1').innerHTML = 'Think of one natural number that is greater than 0 and less than 22';
-        document.getElementById('text2').innerHTML = 'Click on the group that contains the number you think';
-        document.getElementById('info').innerHTML = 'Math trick, Copyright &copy; 2024 <br> All Rights Reserved. Created by <a href="http://t.me/Shaxriyor_programmer">Sh.Sanatov</a> <br> VERSION 1.0.5';
-      
-        yana = 'Again';
-        text3 = 'The number you think of ';
-        text4 = 'Please refresh the page to try again.';
-    
-      }
-      
-      else if(selectedOption === 'Русский'){
-      
-        document.getElementById('title').innerHTML = 'Математический трюк';
-        document.getElementById('h1').innerHTML = 'Математический трюк';
-        document.getElementById('text1').innerHTML = 'Думайте одно натуральное число больше 0 и меньше 22';
-        document.getElementById('text2').innerHTML = 'Нажмите на группу, содержащую номер, который, по вашему мнению';
-        document.getElementById('info').innerHTML = 'Математический трюк, Авторские права &copy; 2024<br> Все права защищены. Создано <a href="http://t.me/Shaxriyor_programmer">Ш.Санатов</a> <br> ВЕРСИЯ 1.0.5';
-       
-        yana = 'Снова';
-        text3 = 'Это число, о котором вы подумал(а) ';
-        text4 = 'Пожалуйста, обновите страницу, чтобы повторить попытку.';
-  
-      } 
-      
-      else {
-       
-        document.getElementById('title').innerHTML = 'Matematik hiyla';
-        document.getElementById('h1').innerHTML = 'Matematik hiyla';
-        document.getElementById('text1').innerHTML = '0dan katta 22dan kichik bitta natural son õylang';
-        document.getElementById('text2').innerHTML = 'Õsha õylagan soningiz turgan guruh ustiga bosing';
-        document.getElementById('info').innerHTML = 'Matematik hiyla, Mualliflik huquqi &copy; 2024 <br> Barcha huquqlar himoyalangan. <a href="http://t.me/Shaxriyor_programmer">Sh.Sanatov</a> tomonidan yaratilgan<br> VERSIYA 1.0.5';
-      
-        yana = 'Yana';
-        text3 = 'Siz õylagan son: ';
-        text4 = 'Yana bir bor urunib kõrish uchun sahifani yangilang.';
-     
-      }
-      
-    });
-    
-    document.getElementById('stGroup').addEventListener('click', function(){
-      
-      taps++;
-      
-      if (taps === 1) {
-       
-        stNum1[0] = ndNum[0];
-        stNum1[1] = ndNum[3];
-        stNum1[2] = ndNum[6];
-        stNum1[3] = stNum[2];
-        stNum1[4] = stNum[5];
-        stNum1[5] = rdNum[1];
-        stNum1[6] = rdNum[4];
-    
-        document.getElementById('stGroup').innerHTML = stNum1;
-                           
-        ndNum1[0] = ndNum[1];
-        ndNum1[1] = ndNum[4];
-        ndNum1[2] = stNum[0];
-        ndNum1[3] = stNum[3];
-        ndNum1[4] = stNum[6];
-        ndNum1[5] = rdNum[2];
-        ndNum1[6] = rdNum[5];
-       
-        document.getElementById('ndGroup').innerHTML = ndNum1;   
-      
-        rdNum1[0] = ndNum[2];
-        rdNum1[1] = ndNum[5];
-        rdNum1[2] = stNum[1];
-        rdNum1[3] = stNum[4];
-        rdNum1[4] = rdNum[0];
-        rdNum1[5] = rdNum[3];
-        rdNum1[6] = rdNum[6];
-      
-        document.getElementById('rdGroup').innerHTML = rdNum1;
-    
-        alert(yana);
-        
-      }
-      
-      else if (taps === 2) {
-        
-        stNum2[0] = ndNum1[0];
-        stNum2[1] = ndNum1[3];
-        stNum2[2] = ndNum1[6];
-        stNum2[3] = stNum1[2];
-        stNum2[4] = stNum1[5];
-        stNum2[5] = rdNum1[1];
-        stNum2[6] = rdNum1[4];
-       
-        document.getElementById('stGroup').innerHTML = stNum2;
-       
-        ndNum2[0] = ndNum1[1];
-        ndNum2[1] = ndNum1[4];
-        ndNum2[2] = stNum1[0];
-        ndNum2[3] = stNum1[3];
-        ndNum2[4] = stNum1[6];
-        ndNum2[5] = rdNum1[2];
-        ndNum2[6] = rdNum1[5];
-      
-        document.getElementById('ndGroup').innerHTML = ndNum2;   
-      
-        rdNum2[0] = ndNum1[2];
-        rdNum2[1] = ndNum1[5];
-        rdNum2[2] = stNum1[1];
-        rdNum2[3] = stNum1[4];
-        rdNum2[4] = rdNum1[0];
-        rdNum2[5] = rdNum1[3];
-        rdNum2[6] = rdNum1[6];
-       
-        document.getElementById('rdGroup').innerHTML = rdNum2;
-    
-        alert(yana);
-        
-      }
-      
-      else {
-        alert(text3 + stNum2[3] + '. ' + text4);
-      }
-      
-    });
-    
-    document.getElementById('ndGroup').addEventListener('click', function(){
  
-      taps++;
-      
-      if (taps === 1) {
-        
-        stNum1[0] = stNum[0];
-        stNum1[1] = stNum[3];
-        stNum1[2] = stNum[6];
-        stNum1[3] = ndNum[2];
-        stNum1[4] = ndNum[5];
-        stNum1[5] = rdNum[1];
-        stNum1[6] = rdNum[4];
-       
-        document.getElementById('stGroup').innerHTML = stNum1;
-       
-        ndNum1[0] = stNum[1];
-        ndNum1[1] = stNum[4];
-        ndNum1[2] = ndNum[0];
-        ndNum1[3] = ndNum[3];
-        ndNum1[4] = ndNum[6];
-        ndNum1[5] = rdNum[2];
-        ndNum1[6] = rdNum[5];
-      
-        document.getElementById('ndGroup').innerHTML = ndNum1;   
-       
-        rdNum1[0] = stNum[2];
-        rdNum1[1] = stNum[5];
-        rdNum1[2] = ndNum[1];
-        rdNum1[3] = ndNum[4];
-        rdNum1[4] = rdNum[0];
-        rdNum1[5] = rdNum[3];
-        rdNum1[6] = rdNum[6];
-      
-        document.getElementById('rdGroup').innerHTML = rdNum1;
-  
-        alert(yana);
-   
-      }
-      
-      else if (taps === 2) {
-       
-        stNum2[0] = stNum1[0];
-        stNum2[1] = stNum1[3];
-        stNum2[2] = stNum1[6];
-        stNum2[3] = ndNum1[2];
-        stNum2[4] = ndNum1[5];
-        stNum2[5] = rdNum1[1];
-        stNum2[6] = rdNum1[4];
-       
-        document.getElementById('stGroup').innerHTML = stNum2;
-      
-        ndNum2[0] = stNum1[1];
-        ndNum2[1] = stNum1[4];
-        ndNum2[2] = ndNum1[0];
-        ndNum2[3] = ndNum1[3];
-        ndNum2[4] = ndNum1[6];
-        ndNum2[5] = rdNum1[2];
-        ndNum2[6] = rdNum1[5];
-       
-        document.getElementById('ndGroup').innerHTML = ndNum2;   
-      
-        rdNum2[0] = stNum1[2];
-        rdNum2[1] = stNum1[5];
-        rdNum2[2] = ndNum1[1];
-        rdNum2[3] = ndNum1[4];
-        rdNum2[4] = rdNum1[0];
-        rdNum2[5] = rdNum1[3];
-        rdNum2[6] = rdNum1[6];
-       
-        document.getElementById('rdGroup').innerHTML = rdNum2;
-      
-        alert(yana);
-     
-      }
-      
-      else {
-        alert(text3 + ndNum2[3] + '. ' + text4);
-      }
-      
-    });
+ 
+    <header>
+        <div class="header">
+            
+            <h1 id="h1" onclick="location.reload()">Math trick</h1>
+            <p id="til">Language/Язык/Til</p>
+            
+            <select id="lang">
+                <option 
+                    value="en"
+                    onclick="changeL()"
+                >English</option>
+                <option 
+                    value="ru"
+                    onclick="changeL()"
+                >Русский</option>
+                <option
+                    value="uz"
+                    onclick="changeL()"
+                >O'zbekcha</option>
+            </select>
+            
+        </div>
+    </header>
     
-    document.getElementById('rdGroup').addEventListener('click', function(){
     
-      taps++;
-      
-      if (taps === 1) {
+    <main>
         
-        stNum1[0] = stNum[0];
-        stNum1[1] = stNum[3];
-        stNum1[2] = stNum[6];
-        stNum1[3] = rdNum[2];
-        stNum1[4] = rdNum[5];
-        stNum1[5] = ndNum[1];
-        stNum1[6] = ndNum[4];
-       
-        document.getElementById('stGroup').innerHTML = stNum1;
-      
-        ndNum1[0] = stNum[1];
-        ndNum1[1] = stNum[4];
-        ndNum1[2] = rdNum[0];
-        ndNum1[3] = rdNum[3];
-        ndNum1[4] = rdNum[6];
-        ndNum1[5] = ndNum[2];
-        ndNum1[6] = ndNum[5];
-       
-        document.getElementById('ndGroup').innerHTML = ndNum1;   
-       
-        rdNum1[0] = stNum[2];
-        rdNum1[1] = stNum[5];
-        rdNum1[2] = rdNum[1];
-        rdNum1[3] = rdNum[4];
-        rdNum1[4] = ndNum[0];
-        rdNum1[5] = ndNum[3];
-        rdNum1[6] = ndNum[6];
+        <center>
+            <h2 id="text1">Think of one natural number that is greater than 0 and less than 22</h2>
+            <p id="text2">Click on the group that contains the number you think</p>
+        </center>
         
-        document.getElementById('rdGroup').innerHTML = rdNum1;
-      
-        alert(yana);
-   
-      }
-      
-      else if (taps === 2) {
+        <div>
         
-        stNum2[0] = stNum1[0];
-        stNum2[1] = stNum1[3];
-        stNum2[2] = stNum1[6];
-        stNum2[3] = rdNum1[2];
-        stNum2[4] = rdNum1[5];
-        stNum2[5] = ndNum1[1];
-        stNum2[6] = ndNum1[4];
-       
-        document.getElementById('stGroup').innerHTML = stNum2;
-       
-        ndNum2[0] = stNum1[1];
-        ndNum2[1] = stNum1[4];
-        ndNum2[2] = rdNum1[0];
-        ndNum2[3] = rdNum1[3];
-        ndNum2[4] = rdNum1[6];
-        ndNum2[5] = ndNum1[2];
-        ndNum2[6] = ndNum1[5];
+            <span>
+                <center id="firstGroup">
+                    4,17,21,15,2,5,13
+                </center>
+            </span>
         
-        document.getElementById('ndGroup').innerHTML = ndNum2;   
-      
-        rdNum2[0] = stNum1[2];
-        rdNum2[1] = stNum1[5];
-        rdNum2[2] = rdNum1[1];
-        rdNum2[3] = rdNum1[4];
-        rdNum2[4] = ndNum1[0];
-        rdNum2[5] = ndNum1[3];
-        rdNum2[6] = ndNum1[6];
+            <span> 
+                <center id="secondGroup">
+                    7,11,12,18,6,9,14
+                </center>
+            </span>
+            
+            <span>
+                <center id="thirdGroup">
+                    8,3,20,16,1,19,10
+                </center>
+            </span>
         
-        document.getElementById('rdGroup').innerHTML = rdNum2;
+        </div>
+    
+    </main>
+    
+    
+    <footer>
+        <center>
+            <p id="info">
+                Math trick, Copyright &copy; 2024
+                <br>
+                All Rights Reserved. Created by 
+                <a href="http://t.me/ShaxriyorProgrammer">
+                    Sh.Sanatov
+                </a>
+                <br>
+                VERSION 1.0.5
+            </p>
+        </center>
+    </footer>
+    
+    
+    
+    <script>
+        
+        
+        var lang = document.getElementById('lang'); 
+        var title = '';
+        var h1 = '';
+        var text1 = '';
+        var text2 = '';
+        var yana = 'Again';
+        var text3 = 'The number you think of ';
+        var text4 = 'Please refresh the page to try again.';
+        var taps = 0;
      
-        alert(yana);
-                         
-      }
-                                                
-      else {
-        alert(text3 + rdNum2[3] + '. ' + text4);
-      }
-                                              
-    });
-                                          
-  </script>  
-                                                        
+     
+        var numbers = [
+            1, 2, 3, 4, 5, 6, 7, 
+            8, 9, 10, 11, 12, 13, 14,
+            15, 16, 17, 18, 19, 20, 21
+        ];
+        
+        var firstNumbers = [4, 17, 21, 15, 2, 5, 13];
+        var secondNumbers = [7, 11, 12, 18, 6, 9, 14];
+        var thirdNumbers = [8, 3, 20, 16, 1, 19, 10];
+     
+        var firstNumbers1 = [];
+        var secondNumbers1 = [];
+        var thirdNumbers1 = [];
+     
+        var firstNumbers2 = [];
+        var secondNumbers2 = [];
+        var thirdNumbers2 = [];
+        
+     
+        
+        // Shuffling the numbers using the 'Math.random()'
+        
+        
+        var min = 1;
+        var max = 21;
+        var randomNumber = '';
+        
+        
+        var first = 0;
+        
+        while (first < 7) {
+            randomNumber = Math.floor(Math.random() * (max - min + 1)) - min + 1;
+            if(!firstNumbers.includes(numbers[randomNumber])) {
+                firstNumbers[first] = numbers[randomNumber];
+                first++;
+            }
+        }
+        
+        document.getElementById('firstGroup').innerHTML = firstNumbers;
+        
+        
+        var second = 0;
+        
+        while (second < 7) {
+            randomNumber = Math.floor(Math.random() * (max - min + 1)) - min + 1;
+            if(
+                !firstNumbers.includes(numbers[randomNumber])
+                &&
+                !secondNumbers.includes(numbers[randomNumber])
+            ) {
+                secondNumbers[second] = numbers[randomNumber];
+                second++;
+            }
+        }
+        
+        document.getElementById('secondGroup').innerHTML = secondNumbers;
+        
+        
+        var third = 0;
+        
+        while (third < 7) {
+            randomNumber = Math.floor(Math.random() * (max - min + 1)) - min + 1;
+            if(
+                !firstNumbers.includes(numbers[randomNumber])
+                &&
+                !secondNumbers.includes(numbers[randomNumber])
+                && 
+                !thirdNumbers.includes(numbers[randomNumber])
+            ) {
+                thirdNumbers[third] = numbers[randomNumber];
+                third++;
+            }
+        }
+        
+        document.getElementById('thirdGroup').innerHTML = thirdNumbers;
+     
+     
+        // Shuffling the numbers is OVER
+        
+        
+        
+        // Changing the language
+        
+        lang.addEventListener('change', function() {
+         
+            var selectedOption = lang.options[lang.selectedIndex].text;
+         
+         
+            if(selectedOption === 'English') {
+            
+                document.getElementById('title').innerHTML = 'Math trick'; 
+                document.getElementById('h1').innerHTML = 'Math trick';
+                document.getElementById('text1').innerHTML = 'Think of one natural number that is greater than 0 and less than 22';
+                document.getElementById('text2').innerHTML = 'Click on the group that contains the number you think';
+                document.getElementById('info').innerHTML = `
+                    Math trick,
+                    Copyright &copy; 2024
+                    <br> 
+                    All Rights Reserved. 
+                    Created by 
+                    <a href="http://t.me/Shaxriyor_programmer">
+                        Sh.Sanatov
+                    </a> 
+                    <br>
+                    VERSION 1.0.5
+                `;
+            
+                yana = 'Again';
+                text3 = 'The number you think of ';
+                text4 = 'Please refresh the page to try again.';
+        
+            }
+            
+            
+            else if(selectedOption === 'Русский'){
+            
+                document.getElementById('title').innerHTML = 'Математический трюк';
+                document.getElementById('h1').innerHTML = 'Математический трюк';
+                document.getElementById('text1').innerHTML = 'Думайте одно натуральное число больше 0 и меньше 22';
+                document.getElementById('text2').innerHTML = 'Нажмите на группу, содержащую номер, который, по вашему мнению';
+                document.getElementById('info').innerHTML = `
+                    Математический трюк, 
+                    Авторские права &copy; 2024
+                    <br>
+                    Все права защищены.
+                    Создано 
+                    <a href="http://t.me/Shaxriyor_programmer">
+                        Ш.Санатов
+                    </a> 
+                    <br>
+                    ВЕРСИЯ 1.0.5
+                `;
+             
+                yana = 'Снова';
+                text3 = 'Это число, о котором вы подумал(а) ';
+                text4 = 'Пожалуйста, обновите страницу, чтобы повторить попытку.';
+    
+            } 
+            
+            
+            // Uzbek
+            else {
+             
+                document.getElementById('title').innerHTML = 'Matematik hiyla';
+                document.getElementById('h1').innerHTML = 'Matematik hiyla';
+                document.getElementById('text1').innerHTML = '0dan katta 22dan kichik bitta natural son õylang';
+                document.getElementById('text2').innerHTML = 'Õsha õylagan soningiz turgan guruh ustiga bosing';
+                document.getElementById('info').innerHTML = `
+                    Matematik hiyla, 
+                    Mualliflik huquqi &copy; 2024 
+                    <br> 
+                    Barcha huquqlar himoyalangan.
+                    <a href="http://t.me/Shaxriyor_programmer">
+                        Sh.Sanatov
+                    </a> 
+                    tomonidan yaratilgan
+                    <br>
+                    VERSIYA 1.0.5
+                `;
+            
+                yana = 'Yana';
+                text3 = 'Siz õylagan son: ';
+                text4 = 'Yana bir bor urunib kõrish uchun sahifani yangilang.';
+         
+            }
+            
+            
+        });
+        
+        // Changing the language is OVER
+        
+        
+        
+        // When the first group clicked: 
+        
+        document.getElementById('firstGroup').addEventListener('click', function(){
+            
+            taps++;
+            
+            
+            if (taps === 1) {
+             
+                firstNumbers1[0] = secondNumbers[0];
+                firstNumbers1[1] = secondNumbers[3];
+                firstNumbers1[2] = secondNumbers[6];
+                firstNumbers1[3] = firstNumbers[2];
+                firstNumbers1[4] = firstNumbers[5];
+                firstNumbers1[5] = thirdNumbers[1];
+                firstNumbers1[6] = thirdNumbers[4];
+        
+                document.getElementById('firstGroup').innerHTML = firstNumbers1;
+                  
+                secondNumbers1[0] = secondNumbers[1];
+                secondNumbers1[1] = secondNumbers[4];
+                secondNumbers1[2] = firstNumbers[0];
+                secondNumbers1[3] = firstNumbers[3];
+                secondNumbers1[4] = firstNumbers[6];
+                secondNumbers1[5] = thirdNumbers[2];
+                secondNumbers1[6] = thirdNumbers[5];
+             
+                document.getElementById('secondGroup').innerHTML = secondNumbers1;     
+            
+                thirdNumbers1[0] = secondNumbers[2];
+                thirdNumbers1[1] = secondNumbers[5];
+                thirdNumbers1[2] = firstNumbers[1];
+                thirdNumbers1[3] = firstNumbers[4];
+                thirdNumbers1[4] = thirdNumbers[0];
+                thirdNumbers1[5] = thirdNumbers[3];
+                thirdNumbers1[6] = thirdNumbers[6];
+            
+                document.getElementById('thirdGroup').innerHTML = thirdNumbers1;
+        
+                alert(yana);
+                
+            }
+            
+            
+            else if (taps === 2) {
+                
+                firstNumbers2[0] = secondNumbers1[0];
+                firstNumbers2[1] = secondNumbers1[3];
+                firstNumbers2[2] = secondNumbers1[6];
+                firstNumbers2[3] = firstNumbers1[2];
+                firstNumbers2[4] = firstNumbers1[5];
+                firstNumbers2[5] = thirdNumbers1[1];
+                firstNumbers2[6] = thirdNumbers1[4];
+             
+                document.getElementById('firstGroup').innerHTML = firstNumbers2;
+             
+                secondNumbers2[0] = secondNumbers1[1];
+                secondNumbers2[1] = secondNumbers1[4];
+                secondNumbers2[2] = firstNumbers1[0];
+                secondNumbers2[3] = firstNumbers1[3];
+                secondNumbers2[4] = firstNumbers1[6];
+                secondNumbers2[5] = thirdNumbers1[2];
+                secondNumbers2[6] = thirdNumbers1[5];
+            
+                document.getElementById('secondGroup').innerHTML = secondNumbers2;     
+            
+                thirdNumbers2[0] = secondNumbers1[2];
+                thirdNumbers2[1] = secondNumbers1[5];
+                thirdNumbers2[2] = firstNumbers1[1];
+                thirdNumbers2[3] = firstNumbers1[4];
+                thirdNumbers2[4] = thirdNumbers1[0];
+                thirdNumbers2[5] = thirdNumbers1[3];
+                thirdNumbers2[6] = thirdNumbers1[6];
+             
+                document.getElementById('thirdGroup').innerHTML = thirdNumbers2;
+        
+                alert(yana);
+                
+            }
+            
+            
+            else {
+                alert(text3 + firstNumbers2[3] + '. ' + text4);
+            }
+            
+            
+        });
+        
+        
+        
+        // When the second group clicked:
+        
+        document.getElementById('secondGroup').addEventListener('click', function(){
+ 
+            taps++;
+            
+            
+            if (taps === 1) {
+                
+                firstNumbers1[0] = firstNumbers[0];
+                firstNumbers1[1] = firstNumbers[3];
+                firstNumbers1[2] = firstNumbers[6];
+                firstNumbers1[3] = secondNumbers[2];
+                firstNumbers1[4] = secondNumbers[5];
+                firstNumbers1[5] = thirdNumbers[1];
+                firstNumbers1[6] = thirdNumbers[4];
+             
+                document.getElementById('firstGroup').innerHTML = firstNumbers1;
+             
+                secondNumbers1[0] = firstNumbers[1];
+                secondNumbers1[1] = firstNumbers[4];
+                secondNumbers1[2] = secondNumbers[0];
+                secondNumbers1[3] = secondNumbers[3];
+                secondNumbers1[4] = secondNumbers[6];
+                secondNumbers1[5] = thirdNumbers[2];
+                secondNumbers1[6] = thirdNumbers[5];
+            
+                document.getElementById('secondGroup').innerHTML = secondNumbers1;     
+             
+                thirdNumbers1[0] = firstNumbers[2];
+                thirdNumbers1[1] = firstNumbers[5];
+                thirdNumbers1[2] = secondNumbers[1];
+                thirdNumbers1[3] = secondNumbers[4];
+                thirdNumbers1[4] = thirdNumbers[0];
+                thirdNumbers1[5] = thirdNumbers[3];
+                thirdNumbers1[6] = thirdNumbers[6];
+            
+                document.getElementById('thirdGroup').innerHTML = thirdNumbers1;
+    
+                alert(yana);
+     
+            }
+            
+            
+            else if (taps === 2) {
+             
+                firstNumbers2[0] = firstNumbers1[0];
+                firstNumbers2[1] = firstNumbers1[3];
+                firstNumbers2[2] = firstNumbers1[6];
+                firstNumbers2[3] = secondNumbers1[2];
+                firstNumbers2[4] = secondNumbers1[5];
+                firstNumbers2[5] = thirdNumbers1[1];
+                firstNumbers2[6] = thirdNumbers1[4];
+             
+                document.getElementById('firstGroup').innerHTML = firstNumbers2;
+            
+                secondNumbers2[0] = firstNumbers1[1];
+                secondNumbers2[1] = firstNumbers1[4];
+                secondNumbers2[2] = secondNumbers1[0];
+                secondNumbers2[3] = secondNumbers1[3];
+                secondNumbers2[4] = secondNumbers1[6];
+                secondNumbers2[5] = thirdNumbers1[2];
+                secondNumbers2[6] = thirdNumbers1[5];
+             
+                document.getElementById('secondGroup').innerHTML = secondNumbers2;     
+            
+                thirdNumbers2[0] = firstNumbers1[2];
+                thirdNumbers2[1] = firstNumbers1[5];
+                thirdNumbers2[2] = secondNumbers1[1];
+                thirdNumbers2[3] = secondNumbers1[4];
+                thirdNumbers2[4] = thirdNumbers1[0];
+                thirdNumbers2[5] = thirdNumbers1[3];
+                thirdNumbers2[6] = thirdNumbers1[6];
+             
+                document.getElementById('thirdGroup').innerHTML = thirdNumbers2;
+            
+                alert(yana);
+         
+            }
+            
+            
+            else {
+                alert(text3 + secondNumbers2[3] + '. ' + text4);
+            }
+            
+            
+        });
+        
+        
+        
+        // When the third group clicked:
+        
+        document.getElementById('thirdGroup').addEventListener('click', function(){
+        
+            taps++;
+            
+            
+            if (taps === 1) {
+                
+                firstNumbers1[0] = firstNumbers[0];
+                firstNumbers1[1] = firstNumbers[3];
+                firstNumbers1[2] = firstNumbers[6];
+                firstNumbers1[3] = thirdNumbers[2];
+                firstNumbers1[4] = thirdNumbers[5];
+                firstNumbers1[5] = secondNumbers[1];
+                firstNumbers1[6] = secondNumbers[4];
+             
+                document.getElementById('firstGroup').innerHTML = firstNumbers1;
+            
+                secondNumbers1[0] = firstNumbers[1];
+                secondNumbers1[1] = firstNumbers[4];
+                secondNumbers1[2] = thirdNumbers[0];
+                secondNumbers1[3] = thirdNumbers[3];
+                secondNumbers1[4] = thirdNumbers[6];
+                secondNumbers1[5] = secondNumbers[2];
+                secondNumbers1[6] = secondNumbers[5];
+             
+                document.getElementById('secondGroup').innerHTML = secondNumbers1;     
+             
+                thirdNumbers1[0] = firstNumbers[2];
+                thirdNumbers1[1] = firstNumbers[5];
+                thirdNumbers1[2] = thirdNumbers[1];
+                thirdNumbers1[3] = thirdNumbers[4];
+                thirdNumbers1[4] = secondNumbers[0];
+                thirdNumbers1[5] = secondNumbers[3];
+                thirdNumbers1[6] = secondNumbers[6];
+                
+                document.getElementById('thirdGroup').innerHTML = thirdNumbers1;
+            
+                alert(yana);
+     
+            }
+            
+            
+            else if (taps === 2) {
+                
+                firstNumbers2[0] = firstNumbers1[0];
+                firstNumbers2[1] = firstNumbers1[3];
+                firstNumbers2[2] = firstNumbers1[6];
+                firstNumbers2[3] = thirdNumbers1[2];
+                firstNumbers2[4] = thirdNumbers1[5];
+                firstNumbers2[5] = secondNumbers1[1];
+                firstNumbers2[6] = secondNumbers1[4];
+             
+                document.getElementById('firstGroup').innerHTML = firstNumbers2;
+             
+                secondNumbers2[0] = firstNumbers1[1];
+                secondNumbers2[1] = firstNumbers1[4];
+                secondNumbers2[2] = thirdNumbers1[0];
+                secondNumbers2[3] = thirdNumbers1[3];
+                secondNumbers2[4] = thirdNumbers1[6];
+                secondNumbers2[5] = secondNumbers1[2];
+                secondNumbers2[6] = secondNumbers1[5];
+                
+                document.getElementById('secondGroup').innerHTML = secondNumbers2;     
+            
+                thirdNumbers2[0] = firstNumbers1[2];
+                thirdNumbers2[1] = firstNumbers1[5];
+                thirdNumbers2[2] = thirdNumbers1[1];
+                thirdNumbers2[3] = thirdNumbers1[4];
+                thirdNumbers2[4] = secondNumbers1[0];
+                thirdNumbers2[5] = secondNumbers1[3];
+                thirdNumbers2[6] = secondNumbers1[6];
+                
+                document.getElementById('thirdGroup').innerHTML = thirdNumbers2;
+                
+                alert(yana);
+            
+            }
+            
+            
+            else {
+                alert(text3 + thirdNumbers2[3] + '. ' + text4);
+            }
+            
+            
+        });
+        
+        
+        
+    </script>
+    
+    
+    
 </body>
 </html>
